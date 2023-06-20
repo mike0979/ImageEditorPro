@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/color.png</file>
+        <file>Resources/line.png</file>
+        <file>Resources/open.png</file>
+        <file>Resources/polygon.png</file>
+        <file>Resources/polyline.png</file>
+        <file>Resources/rect.png</file>
+        <file>Resources/redo.png</file>
+        <file>Resources/restore.png</file>
+        <file>Resources/save.png</file>
+        <file>Resources/text.png</file>
+        <file>Resources/UltimageTK_LogoOnly.png</file>
+        <file>Resources/undo.png</file>
+        <file>Resources/choose.png</file>
+        <file>Resources/clear.png</file>
+        <file>Resources/gray.png</file>
+        <file>Resources/measureangle.png</file>
+        <file>Resources/measureline.png</file>
+        <file>Resources/negative.png</file>
+        <file>Resources/settings.png</file>
+        <file>Resources/mouse.png</file>
+    </qresource>
+</RCC>

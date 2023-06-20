@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Header Files\Base">
+      <UniqueIdentifier>{44188c23-7d9a-491c-a3ea-4b551a7000df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Base">
+      <UniqueIdentifier>{8b6f5038-8658-43f8-9911-6d188c9dc37a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Undo">
+      <UniqueIdentifier>{0e0a5790-58f0-407c-9d34-ba68dc533d9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Undo">
+      <UniqueIdentifier>{e923ffd9-f765-4b78-a909-c0c92f064fc4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Roi.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\RoiLine.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\RoiPolygon.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\RoiPolyline.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\RoiRect.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\RoiText.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\MeasureAngle.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\MeasureLine.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Undo\MoveCmd.cpp">
+      <Filter>Source Files\Undo</Filter>
+    </ClCompile>
+    <ClCompile Include="Undo\OperCmd.cpp">
+      <Filter>Source Files\Undo</Filter>
+    </ClCompile>
+    <ClCompile Include="Undo\ResizeCmd.cpp">
+      <Filter>Source Files\Undo</Filter>
+    </ClCompile>
+    <ClCompile Include="Undo\AddCmd.cpp">
+      <Filter>Source Files\Undo</Filter>
+    </ClCompile>
+    <ClCompile Include="Undo\ClearCmd.cpp">
+      <Filter>Source Files\Undo</Filter>
+    </ClCompile>
+    <ClCompile Include="Undo\DeleteCmd.cpp">
+      <Filter>Source Files\Undo</Filter>
+    </ClCompile>
+    <ClCompile Include="Undo\ImgMoveCmd.cpp">
+      <Filter>Source Files\Undo</Filter>
+    </ClCompile>
+    <ClCompile Include="Undo\ImgResizeCmd.cpp">
+      <Filter>Source Files\Undo</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageEditorPro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LabelEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Undo\OperCmd.h">
+      <Filter>Header Files\Undo</Filter>
+    </QtMoc>
+    <QtMoc Include="ImageEditorPro.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="LabelEx.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SettingsWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="ImageEditorPro.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Define.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Roi.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\RoiLine.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\RoiPolygon.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\RoiPolyline.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\RoiRect.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\RoiText.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\MeasureAngle.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\MeasureLine.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Undo\AddCmd.h">
+      <Filter>Header Files\Undo</Filter>
+    </ClInclude>
+    <ClInclude Include="Undo\MoveCmd.h">
+      <Filter>Header Files\Undo</Filter>
+    </ClInclude>
+    <ClInclude Include="Undo\ResizeCmd.h">
+      <Filter>Header Files\Undo</Filter>
+    </ClInclude>
+    <ClInclude Include="Undo\ClearCmd.h">
+      <Filter>Header Files\Undo</Filter>
+    </ClInclude>
+    <ClInclude Include="Undo\DeleteCmd.h">
+      <Filter>Header Files\Undo</Filter>
+    </ClInclude>
+    <ClInclude Include="Undo\ImgMoveCmd.h">
+      <Filter>Header Files\Undo</Filter>
+    </ClInclude>
+    <ClInclude Include="Undo\ImgResizeCmd.h">
+      <Filter>Header Files\Undo</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomPlot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="SettingsWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ImageEditorPro.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+</Project>

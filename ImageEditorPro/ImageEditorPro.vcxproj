@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7F2DA1EF-9108-4660-A63B-533D17D68C2B}</ProjectGuid>
+    <Keyword>QtVS_v302</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <ProjectName>ImageEditorPro</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\bin\</OutDir>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;.\Undo;.\Base;..\libs\qcustomplot\include;..\libs\opencv\include\opencv2;..\libs\opencv\include\opencv;..\libs\opencv\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\libs\qcustomplot\lib;..\libs\opencv\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qcustomplot2.lib;opencv_world340.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Base\MeasureAngle.cpp" />
+    <ClCompile Include="Base\MeasureLine.cpp" />
+    <ClCompile Include="Base\Roi.cpp" />
+    <ClCompile Include="Base\RoiLine.cpp" />
+    <ClCompile Include="Base\RoiPolygon.cpp" />
+    <ClCompile Include="Base\RoiPolyline.cpp" />
+    <ClCompile Include="Base\RoiRect.cpp" />
+    <ClCompile Include="Base\RoiText.cpp" />
+    <ClCompile Include="ImageEditorPro.cpp" />
+    <ClCompile Include="LabelEx.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SettingsWidget.cpp" />
+    <ClCompile Include="Undo\AddCmd.cpp" />
+    <ClCompile Include="Undo\ClearCmd.cpp" />
+    <ClCompile Include="Undo\DeleteCmd.cpp" />
+    <ClCompile Include="Undo\ImgMoveCmd.cpp" />
+    <ClCompile Include="Undo\ImgResizeCmd.cpp" />
+    <ClCompile Include="Undo\OperCmd.cpp" />
+    <ClCompile Include="Undo\MoveCmd.cpp" />
+    <ClCompile Include="Undo\ResizeCmd.cpp" />
+    <ClCompile Include="Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ImageEditorPro.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="ImageEditorPro.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ImageEditorPro.ui" />
+    <QtUic Include="SettingsWidget.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base\MeasureAngle.h" />
+    <ClInclude Include="Base\MeasureLine.h" />
+    <ClInclude Include="Base\Roi.h" />
+    <ClInclude Include="Base\RoiLine.h" />
+    <ClInclude Include="Base\RoiPolygon.h" />
+    <ClInclude Include="Base\RoiPolyline.h" />
+    <ClInclude Include="Base\RoiRect.h" />
+    <ClInclude Include="Base\RoiText.h" />
+    <ClInclude Include="CustomPlot.h" />
+    <ClInclude Include="Define.h" />
+    <QtMoc Include="LabelEx.h" />
+    <QtMoc Include="SettingsWidget.h" />
+    <ClInclude Include="Undo\AddCmd.h" />
+    <QtMoc Include="Undo\OperCmd.h" />
+    <ClInclude Include="Undo\ClearCmd.h" />
+    <ClInclude Include="Undo\DeleteCmd.h" />
+    <ClInclude Include="Undo\ImgMoveCmd.h" />
+    <ClInclude Include="Undo\ImgResizeCmd.h" />
+    <ClInclude Include="Undo\MoveCmd.h" />
+    <ClInclude Include="Undo\ResizeCmd.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
